@@ -1,0 +1,448 @@
+:root {
+  --main-color: #0e8388;
+  --second-color: #2e4f4f;
+  --third-color: #2c3333;
+  --forth-color: #cbe4de;
+}
+
+body {
+  margin: 0;
+  font-family: "Gabarito", sans-serif;
+}
+.page-content-area {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.side-nav-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: #00296b;
+  min-height: 100vh;
+  width: 70px;
+}
+
+.logo-img {
+  height: 40px;
+  width: 50px;
+  position: relative;
+  top: 10px;
+  left: 8px;
+  margin-bottom: 15px;
+}
+.am-img,
+.graph-img {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  left: 18px;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+.am-img:hover,
+.graph-img:hover {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  left: 11px;
+}
+.main-content-area {
+  width: 95vw;
+  padding: 5px 10px;
+}
+.heading-logo {
+  color: #00296b;
+  font-size: 1.8rem;
+  padding: 4px 8px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.logout-container {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ecebeb;
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  right: -20px;
+}
+.logout-container-link {
+  text-decoration: none;
+  position: relative;
+  top: 30px;
+  color: #00296b;
+}
+.help-logo,
+.notification-logo {
+  color: #00296b;
+  position: relative;
+  top: 3px;
+  left: 48vw;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.user_name_img-conatiner {
+  position: relative;
+  top: 9px;
+  left: 50vw;
+  cursor: pointer;
+}
+.user-img-logo {
+  height: 30px;
+  width: 30px;
+  border-left: 2px solid #ecebeb;
+  padding: 0 20px;
+}
+.header-section-break {
+  margin: 15px;
+  border: 1px solid #ecebeb;
+}
+.user-name-logo {
+  position: relative;
+  top: -6px;
+  font-size: 1.4rem;
+  color: #00296b;
+}
+
+.location-input-section {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: #ecebeb;
+  box-shadow: 0 2px 10px rgba(170, 170, 170, 0.8);
+  display: flex;
+  flex-direction: row;
+  width: 950px;
+  gap: 10px;
+  color: #00296b;
+}
+.location-input-img {
+  width: 500px;
+  height: 350px;
+}
+.location-input-div-container {
+  background-color: #f6f4f4;
+  width: 50%;
+}
+.location-input-section-heading,
+.location-fiels-heading,
+.solve-section-heading {
+  text-align: center;
+  margin: 30px;
+  font-size: 2rem;
+  color: #00296b;
+}
+
+.add-location {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 1.5rem;
+  position: relative;
+  top: 30px;
+  left: 15px;
+  margin-bottom: 10px;
+}
+.x-coordinate-input,
+.y-coordinate-input {
+  width: 50%;
+  margin: 2px;
+  transition: 0.2s;
+  border: 1px solid #00296b;
+}
+
+.submit-btn {
+  position: relative;
+  top: 50px;
+  left: 35%;
+  font-family: "Gabarito", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #00296b;
+}
+.submit {
+  margin-bottom: 1rem;
+}
+.container section .locations {
+  list-style: none;
+  font-size: 1.2rem;
+  overflow: none;
+  display: grid;
+  grid-template-areas: "a b c d";
+  gap: 10px;
+  padding: 10px 40px;
+}
+
+.container section .locations .location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: 2px solid #ecebeb;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.container section .locations .location:not(.depot):hover {
+  background-color: gainsboro;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.depot {
+  background-color: #8db0e87a;
+}
+
+.container section .locations .location li {
+  color: #00296b;
+  letter-spacing: 2px;
+  margin: 2px;
+  width: 120px;
+}
+.container section .locations .location span {
+  color: white;
+  font-size: 1rem;
+  margin-right: 20px;
+}
+.container section .locations .location button {
+  padding: 5px 10px;
+  font-family: "Gabarito", sans-serif;
+  background-color: rgb(255, 166, 166);
+  transition: 0.1s;
+  border-radius: 5px;
+  border: 1px solid rgb(211, 47, 47);
+}
+
+.container section .locations .location button:hover {
+  background-color: rgb(211, 47, 47);
+  cursor: pointer;
+}
+.location-pin-logo {
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.solve-section {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: #ecebeb;
+  box-shadow: 0 2px 10px rgba(170, 170, 170, 0.8);
+  display: flex;
+  flex-direction: row;
+  width: 950px;
+  gap: 10px;
+  color: #00296b;
+}
+.solve-section-img {
+  width: 50%;
+  text-align: center;
+}
+.dna-img {
+  height: 300px;
+  transform: rotate(45deg);
+  position: relative;
+  bottom: 40px;
+}
+.truck-img {
+  width: 300px;
+  position: relative;
+  bottom: 60px;
+}
+.solve-section-content {
+  background-color: #f6f4f4;
+  width: 50%;
+  border-radius: 8px;
+}
+
+.solve-section-heading-break {
+  border: 2px solid #ecebeb;
+}
+
+.vehicle-field {
+  font-size: 1.6rem;
+  margin: 1rem;
+  margin-top: 2rem;
+  color: #00296b;
+}
+.vehicle-error {
+  width: 400px;
+  text-align: center;
+  padding-left: 30px;
+  color: #00296b;
+  position: relative;
+  top: 30px;
+}
+
+.solutions-btn {
+  position: relative;
+  top: 50px;
+  font-family: "Gabarito", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #00296b;
+}
+
+.container section .solutions {
+  text-align: center;
+}
+
+.container section .solutions button {
+  margin: 20px 0;
+}
+.section-canvas-break {
+  border: 1px solid #ecebeb;
+}
+
+.canvas-heading {
+  color: #00296b;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container #my-canvas {
+  background-color: aliceblue;
+  border: 1px solid;
+  box-shadow: 0 2px 10px rgba(170, 170, 170, 0.8);
+  position: relative;
+  left: 12%;
+  margin: 1.5rem 0;
+  position: relative;
+  left: 180px;
+}
+.project-details-container {
+  background-color: aliceblue;
+  padding: 1rem;
+  color: var(--main-color);
+}
+.project-minor-title {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.Project-title-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.submitted {
+  font-size: 1.2rem;
+}
+.names {
+  font-size: 1.4rem;
+}
+.hidden {
+  display: none;
+}
+/* :root {
+  --main-color: #0e8388;
+  --second-color: #2e4f4f;
+  --third-color: #2c3333;
+  --forth-color: #cbe4de;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gabarito', sans-serif;
+  width: 100%;
+}
+
+.container {
+  background-color: rgba(41,220,187, 0.2);
+}
+
+.heading-conatiner{
+  text-align: center;
+  font-size: 2.5rem;
+  background-color:   rgba(41,220,187, 0.5);
+  margin-bottom: 2rem;
+  color: var(--main-color);
+  padding: 1rem;
+}
+
+ */
+/* 
+ */
+
+/* button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--main-color);
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: var(--second-color);
+}
+
+button:active {
+  background-color: var(--third-color);
+} */
+/* .solutions-btn {
+  width: 80px;
+}
+.section-canvas-break {
+  color: var(--main-color);
+  border-style: solid;
+  width: 100%;
+  text-align: center;
+}
+
+.canvas-heading {
+  color: var(--main-color);
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container #my-canvas {
+  background-color: aliceblue;
+  border: 1px solid;
+  box-shadow: 0 2px 10px rgba(170, 170, 170, 0.8);
+  position: relative;
+  left: 12%;
+  margin: 1.5rem 0;
+  position: relative;
+  left: 250px;
+}
+.project-details-container {
+  background-color: aliceblue;
+  padding: 1rem;
+  color: var(--main-color);
+}
+.project-minor-title {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.Project-title-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.submitted {
+  font-size: 1.2rem;
+}
+.names {
+  font-size: 1.4rem;
+} */

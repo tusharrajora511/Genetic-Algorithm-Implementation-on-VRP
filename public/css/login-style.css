@@ -1,0 +1,83 @@
+body {
+  font-family: "Gabarito", sans-serif;
+  color: #00296b;
+}
+.login-signup-container {
+  background-color: #ecebeb;
+  height: 70vh;
+  width: 75vw;
+  margin: 4rem 9rem;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px gainsboro;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px 0;
+}
+.user-login-img {
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  top: 50px;
+  left: 100px;
+}
+.login-signup-text-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f4f4;
+  position: relative;
+  left: 250px;
+  width: 40%;
+  border-radius: 20px;
+  text-align: center;
+}
+.user-login-heading,
+.user-signup-heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.email-input,
+.password-input {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 1rem 2rem;
+  border-radius: 20px;
+  border: 2px solid #ecebeb;
+}
+.name-input,
+.signup-email-input,
+.signup-password-input,
+.signup-confirm-password-input {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0.5rem 2rem;
+  border-radius: 20px;
+  border: 2px solid #ecebeb;
+}
+.login-btn {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 1rem;
+  border-radius: 20px;
+  border: 2px solid #ecebeb;
+  cursor: pointer;
+  background-color: rgb(175, 237, 217);
+  color: #00296b;
+}
+.signup-btn {
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 1rem;
+  border: 2px solid #ecebeb;
+  cursor: pointer;
+  background-color: rgb(175, 237, 217);
+  color: #00296b;
+}
+.hidden {
+  display: none;
+}
+.sign-in-btn,
+.sign-up-btn {
+  cursor: pointer;
+}

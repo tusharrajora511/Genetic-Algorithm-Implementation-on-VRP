@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vehicle Routing Problem</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/login-style.css" />
+    <script src="/js/login-page.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="/js/login.js" defer></script>
+    <script src="/js/signup.js" defer></script>
+  </head>
+  <body>
+    <section class="login-signup-container">
+      <div class="login-signup-img-container">
+        <img src="/img/user-login-img.jpg" class="user-login-img" />
+      </div>
+      <div class="login-signup-text-container">
+        <div class="login-container">
+          <div class="user-login-heading">User Login</div>
+          <form class="login-form">
+            <input type="email" placeholder="Email" class="email-input" />
+            <input
+              type="password"
+              placeholder="Password"
+              class="password-input"
+            />
+            <button class="login-btn">Login</button>
+          </form>
+          <div class="sign-up-btn">Don't have an account? Sign up</div>
+        </div>
+        <div class="signup-container hidden">
+          <div class="user-signup-heading">Create Account</div>
+          <form class="signup-form">
+            <input type="text" placeholder="Name" class="name-input" />
+            <input
+              type="email"
+              placeholder="Email"
+              class="signup-email-input"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="signup-password-input"
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              class="signup-confirm-password-input"
+            />
+            <!-- <input type="submit" placeholder="Sign Up" class="signup-btn" /> -->
+            <button class="signup-btn">Sign Up</button>
+          </form>
+          <div class="sign-in-btn">Have an account? Sign in</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

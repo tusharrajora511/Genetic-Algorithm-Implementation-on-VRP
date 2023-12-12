@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Routing Problem</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="/js/logout.js" defer></script>
+  </head>
+  <body>
+    <section class="page-content-area">
+      <div class="side-nav-bar">
+        <img src="img/logo.jpeg" class="logo-img" />
+        <img src="img/analysis-meter.PNG" class="am-img" />
+        <img src="img/graph-logo.PNG" class="graph-img" />
+      </div>
+      <div class="main-content-area">
+        <header>
+          <!-- <input type="search" placeholder="Search..." class="search-box" /> -->
+          <span class="heading-logo">Vehicle Routing System</span>
+          <i style="font-size: 24px" class="fa help-logo">&#xf059;</i>
+          <i style="font-size: 24px" class="fa notification-logo">&#xf0f3;</i>
+          <span class="user_name_img-conatiner"
+            ><img src="img/user-logo.jpg" class="user-img-logo" />
+            <div class="logout-container hidden"><a class="logout-container-link">Log Out</a></div>
+            </span>
+        </header>
+        <hr/ class="header-section-break">
+        <div class="container">
+          <section class="location-input-section">
+            <div class="location-input-img-container">
+              <img src="img/map-img.png" class="location-input-img" />
+            </div>
+            <div class="location-input-div-container">
+              <div class="location-input-section-heading">Add New Loaction</div>
+              <form action="">
+                <div class="add-location">
+                  <div class="field">
+                    <label for="x-coordinate">X-Coordinate: </label>
+                    <input
+                      min="0"
+                      max="40"
+                      step="1"
+                      type="number"
+                      id="x-coordinate"
+                      class="x-coordinate-input"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="y-coordinate">Y-Coordinate: </label>
+                    <input
+                      min="0"
+                      max="20"
+                      step="1"
+                      type="number"
+                      id="y-coordinate"
+                      class="y-coordinate-input"
+                    />
+                  </div>
+                </div>
+                <div class="submit">
+                  <button type="submit" class="submit-btn">Add Location</button>
+                </div>
+              </form>
+            </div>
+            
+          </section>
+          <hr/ class="header-section-break">
+          <section class="location-fiels">
+            <div class="location-fiels-heading">Location Coordinates</div>
+            <ul class="locations"></ul>
+          </section>
+          <section class="solve-section hidden">
+            <div class="solve-section-img">
+              <img src="img/dna-img.png" class="dna-img">
+              <img src="img/truck-img.png" class="truck-img">
+            </div>
+            <div class="solve-section-content">
+              <div class="solve-section-heading">Solve using Genetic Algoritm</div>
+              <hr class="solve-section-heading-break"/>
+              <div class="field vehicle-field">
+                <label for="vehicles">Number of Vehicles: </label>
+                <input min="1" step="1" type="number" id="vehicles" />
+              </div>
+              <div class="vehicle-error hidden">Number of vehicles can't be less than 1, please re-enter the number of vehicles.</div>
+              <div class="solutions">
+                <button class="solutions-btn">Solve</button>
+              </div>
+            </div>
+          </section>
+          <section>
+          </section>
+          <hr/ class='section-canvas-break hidden'>
+          <section class="canvas-section hidden">
+            <div class="canvas-heading"> Graphical Implementation</div>
+            <canvas id="my-canvas" width="800" height="400" class="grid"></canvas>
+          </section>
+        </div>
+      </div>
+    <script src="/js/Location.js"></script>
+    <script src="/js/Chromosome.js"></script>
+    <script src="/js/GA.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
+
+<!-- <div class="container">
+  <div class="heading-conatiner"> <h1>Vehicle Routing System</h1></div>
+
+  <section class="location-input-section">
+    <div class="location-input-section-heading">Add New Loaction</div>
+    <form action="">
+      <div class="add-location">
+        <div class="field">
+          <label for="x-coordinate">X-Coordinate: </label>
+          <input
+            min="0"
+            max="40"
+            step="1"
+            type="number"
+            id="x-coordinate"
+            class="x-coordinate-input"
+          />
+        </div>
+        <div class="field">
+          <label for="y-coordinate">Y-Coordinate: </label>
+          <input
+            min="0"
+            max="20"
+            step="1"
+            type="number"
+            id="y-coordinate"
+            class="y-coordinate-input"
+          />
+        </div>
+      </div>
+      <div class="submit">
+        <button type="submit" class="submit-btn">Add Location</button>
+      </div>
+    </form>
+  </section>
+  <section class="location-fiels">
+    <div class="location-fiels-heading">Location Coordinates</div>
+    <ul class="locations"></ul>
+  </section>
+  <section class="solve-section">
+    <div class="solve-section-heading">Solve using Genetic Algoritm</div>
+    <hr class="solve-section-heading-break"/>
+    <div class="field vehicle-field">
+      <label for="vehicles">Number of Vehicles: </label>
+      <input min="1" step="1" type="number" id="vehicles" />
+    </div>
+    <div class="vehicle-error hidden">Number of vehicles can't be less than 1, please re-enter the number of vehicles.</div>
+    <div class="solutions">
+      <button class="solutions-btn">Solve</button>
+    </div>
+  </section>
+  <section>
+  </section>
+  <hr/ class='section-canvas-break'>
+  <div class="canvas-heading"> Graphical Implementation</div>
+  <canvas id="my-canvas" width="800" height="800" class="grid"></canvas>
+</div>
+<div class="project-details-container">
+  <div class="project-minor-title">Minor Project Title</div>
+  <div class="Project-title-heading">Implementation of Genetic Algorithm on Vehicle Routing system</div>
+  <div class="submitted">Submitted by:-</div>
+  <div class="names">
+    Tushar Kapoor(13415602720)
+    Tushar Rajora(13515602720)
+    Yogya Prashar(15015602720)
+    Abhi Gaur(20415602720)
+  </div>
+</div> -->
